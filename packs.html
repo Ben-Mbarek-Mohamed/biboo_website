@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> BiBoo Website 
+		
+	</title>
+	<link rel="shortcut icon" href="img/biboologo.png">
+  <link rel="stylesheet" href="css/contactus.css" />
+  <link rel="stylesheet" href="css/pack.css" />
+  	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+<!-- Poppins font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+<!-- Tailwind (ensuite, pour écraser Bootstrap si nécessaire) -->
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- Ton style personnalisé en dernier -->
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="antialiased">
+	<!-- navbar -->
+	<div x-data="{ open: false }" class="w-full text-gray-700 bg-cream" >
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+            <div class="flex flex-row items-center justify-between py-6" style="margin-bottom: -30px;">
+				<img src="img/biboosplash.png" alt="Biboo Logo" style="height: 90px; width: auto; " />				
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0" >
+              <a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4" href="/index.html">Acceuil</a>
+          </nav>
+        </div>
+    </div>
+	<div class="bg-cream">
+		<div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+			<!--Left Col-->
+			<div class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+				<h1 data-aos="fade-right" data-aos-once="true" class="my-4 text-4xl font-bold leading-tight text-darken">
+                    Packs Marketing pour booster votre visibilité				</h1>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="leading-normal text-xl mb-8">BiBoo accompagne votre établissement dans sa communication
+                    avec des packs marketing professionnels conçus pour valoriser
+                    votre image et attirer de nouvelles familles.</p>
+			</div>
+			<!--Right Col-->
+			<div data-aos="fade-down" class="md:w-10/12 relative" >
+				<img class="relative  floating" src="img/hand mockup.png" alt="" style="margin-top: -60px; margin-right: 80px;">
+			</div>
+		</div>
+		<div class="text-white -mt-14 sm:-mt-24 lg:-mt-36 z-40 relative">
+			<svg class="xl:h-40 xl:w-full" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" fill="currentColor"></path>
+			</svg>
+			<div class="bg-white w-full h-20 -mt-px"></div>
+		</div>
+	</div>
+
+  <!--Pack section--->
+ 
+  <div class="main-container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 mb-5">
+            <div class="section-heading text-center mb-4 text-hr-line">
+                <h1 class="font-bold text-darken my-3 text-2xl">Optimisez tous <span class="text-yellow-500">les packs</span>  sont modulables selon votre budget. </h1>
+            </div>
+        </div>
+    </div>
+
+   <div class="packages-sec">
+     <div class="package pack-decouverte">
+        <h2>Pack Découverte</h2>
+        <h3>Faites bonne impression dès le départ</h3>
+        <p>Idéal pour les établissements qui débutent ou souhaitent renforcer leur image</p>
+        <ul>
+            <li>Création d’une page Facebook professionnelle</li>
+            <li>Gestion de la page pendant 1 mois avec publications planifiées (affiches attractives)</li>
+            <li>Sponsoring ciblé pour augmenter les abonnés</li>
+            <li>Vidéo promotionnelle (interview) de présentation du gérant ou de l’équipe</li>
+            <li>1 vidéo courte avec voice-over ou musique pour mettre en valeur l’environnement</li>
+        </ul>
+        <button id="btnCommanderDecouverte" class="btn-decouverte">
+            Commander
+        </button>
+     </div>
+     <div class="package pack-visibilite">
+        <h5>Pack Visibilité</h5>
+        <h3>Attirez plus de familles, naturellement</h3>
+        <p>Pour les structures qui veulent se faire remarquer et générer des inscriptions</p>
+        <ul>
+            <li>Publicités sponsorisées (vidéos + affiches) sur Facebook &amp; Instagram</li>
+            <li>Création d’une charte graphique complète (couleurs, typographies, ambiance)</li>
+            <li>Réalisation de : Flyer personnalisé , 10 affiches promotionnelles</li>
+            <li>Réalisation de Carte de visite professionnelle</li>
+            <li>1 vidéo immersive de l’établissement avec voice-over ou musique</li>
+        </ul>
+        <button id="btnCommanderVisibilite" class="btn-visibilite">
+            Commander
+        </button>
+     </div>
+     <div class="package pack-prestige">
+        <h6>Pack Prestige</h6>
+        <h3>Une image de qualité, une communication maîtrisée</h3>
+        <p>Pour les établissements qui veulent incarner l’excellence et la modernité.</p>
+        <ul>
+            <li>Création + gestion avancée de la page pro (optimisation, posts, animation visuelle)</li>
+            <li>Campagne sponsorisée haut de gamme (affiches + vidéos)</li>
+            <li>2 vidéos professionnelles avec montage, interviews ou ambiance musicale</li>
+            <li>Visuels premium adaptés aux événements ou aux saisons</li>
+            <li>Accompagnement personnalisé sur 30 jours pour stratégie de visibilité</li>
+        </ul>
+        <button id="btnCommanderPrestige" class="btn-prestige">
+            Commander
+        </button>
+     </div>
+     <div class="package pack-fidelite">
+        <h4>Pack Fidélité</h4>
+        <h3>Offert exclusivement aux établissements abonnés BiBoo</h3>
+        <p>Une reconnaissance spéciale pour nos partenaires les plus engagés.</p>
+        <ul>
+            <li>3 vidéos incluses : Vidéo de la rentrée scolaire, Vidéo spéciale pour un événement pendant l’année et Vidéo de la fête de fin d’année</li>
+            <li>5 affiches personnalisées pour mettre en valeur votre pédagogie, votre équipe ou votre environnement</li>
+            <li>Création ou modernisation de votre logo</li>
+            <li>Conception d’une couverture professionnelle pour vos pages Facebook et Instagram</li>
+            <li>Recommandation officielle de votre établissement sur la plateforme BiBoo (mise en avant dans notre réseau)</li>
+        </ul>
+        <button id="btnCommanderFidelite" class="btn-fidelite">
+            Commander
+        </button>
+     </div>
+   </div>
+   </div>
+<!-- Pack section fin -->
+
+<!-- Contact -->
+<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10" style="margin-top: 100px;">
+  <div data-aos="zoom-in-right" class="md:w-6/12">
+    <img class="md:w-8/12 mx-auto" src="img/biboofacture.png">
+  </div>
+  <div data-aos="zoom-in-left" class="md:w-6/12" style="margin-top: 90px;">
+    <div class="flex items-center space-x-20 mb-5">
+      <span class="border border-gray-300 w-14 absolute"></span>
+      <h1 class="text-gray-400 tracking-widest text-sm">Prêts à améliorer votre institution ?</h1>
+    </div>
+    <h1 class="font-semibold text-darken text-2xl lg:pr-40">Tous les packs sont modulables selon votre budget</h1>
+<p class="text-gray-500 my-5 lg:pr-20">Contactez-nous pour une formule sur mesure par e-mail, téléphone ou via nos réseaux sociaux. Nous sommes là pour vous accompagner.</p>
+
+<div class="space-y-3 text-gray-700">
+  <!-- Adresse -->
+  <div class="flex items-center">
+    <i class="fa-solid fa-map-location-dot w-6 h-6 mr-2" style="color: #4CB6AC;"></i>
+    <span>123 Rue des Enfants, 75000 Tunis</span>
+  </div>
+
+  <!-- Téléphone -->
+  <div class="flex items-center">
+    <i class="fa-solid fa-phone w-6 h-6 mr-2" style="color: #4CB6AC;"></i>
+    <span>+216 55888999</span>
+  </div>
+
+  <!-- Email -->
+  <div class="flex items-center">
+    <i class="fa-solid fa-envelope w-6 h-6 mr-2" style="color: #4CB6AC;"></i>
+    <span>contact@biboo.fr</span>
+  </div>
+</div>
+
+<!-- Réseaux sociaux -->
+<div class="mt-5 flex space-x-4" style="color: #4CB6AC;">
+  <a href="#" aria-label="Facebook" class="hover:text-[#4CB6AC]">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 4.84 3.44 8.85 8 9.8v-6.93H8v-2.87h2V9.5c0-2.02 1.2-3.13 3.03-3.13.88 0 1.8.16 1.8.16v2h-1.01c-.99 0-1.3.62-1.3 1.25v1.5h2.21l-.35 2.87h-1.86v6.93c4.56-.95 8-4.96 8-9.8z"/>
+    </svg>
+  </a>
+  <a href="#" aria-label="Instagram" class="hover:text-[#4CB6AC]">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-1.5a1 1 0 110 2 1 1 0 010-2z"/>
+    </svg>
+  </a>
+  <a href="#" aria-label="LinkedIn" class="hover:text-[#4CB6AC]">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M4.98 3.5C4.98 4.88 6.1 6 7.48 6s2.5-1.12 2.5-2.5S8.86 1 7.48 1 4.98 2.12 4.98 3.5zM3 8h4v12H3zm6.5 0H14v1.8h.1c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.6V20h-4v-5.6c0-1.3-.5-2.2-1.6-2.2-1 0-1.4.7-1.6 1.2-.1.2-.1.6-.1.9V20h-4z"/>
+    </svg>
+  </a>
+</div>
+
+  </div>
+</div>
+
+<!-- DIGITALISATION -->
+<div class="mt-24 flex flex-col-reverse md:flex-row items-start md:space-x-10">
+    <div data-aos="zoom-in-right" class="md:w-5/12" style="margin-left: 100px; margin-top: 70px; ">
+        <div class="flex items-center space-x-20 mb-5">
+            <span class="border border-gray-300 w-14 absolute"></span>
+            <h1 class="text-gray-400 tracking-widest text-sm">Avec BiBoo, simplifiez. Suivez. Innovez.
+            </h1>
+        </div>
+        <!--gérant-->
+        <div class="flex items-center space-x-5 my-5">
+            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                <svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.375C6.15469 11.375 7.5 9.91758 7.5 8.125C7.5 6.33242 6.15469 4.875 4.5 4.875C2.84531 4.875 1.5 6.33242 1.5 8.125C1.5 9.91758 2.84531 11.375 4.5 11.375ZM25.5 11.375C27.1547 11.375 28.5 9.91758 28.5 8.125C28.5 6.33242 27.1547 4.875 25.5 4.875C23.8453 4.875 22.5 6.33242 22.5 8.125C22.5 9.91758 23.8453 11.375 25.5 11.375ZM27 13H24C23.175 13 22.4297 13.3605 21.8859 13.9445C23.775 15.0668 25.1156 17.093 25.4062 19.5H28.5C29.3297 19.5 30 18.7738 30 17.875V16.25C30 14.4574 28.6547 13 27 13ZM15 13C17.9016 13 20.25 10.4559 20.25 7.3125C20.25 4.16914 17.9016 1.625 15 1.625C12.0984 1.625 9.75 4.16914 9.75 7.3125C9.75 10.4559 12.0984 13 15 13ZM18.6 14.625H18.2109C17.2359 15.1328 16.1531 15.4375 15 15.4375C13.8469 15.4375 12.7688 15.1328 11.7891 14.625H11.4C8.41875 14.625 6 17.2453 6 20.475V21.9375C6 23.2832 7.00781 24.375 8.25 24.375H21.75C22.9922 24.375 24 23.2832 24 21.9375V20.475C24 17.2453 21.5812 14.625 18.6 14.625ZM8.11406 13.9445C7.57031 13.3605 6.825 13 6 13H3C1.34531 13 0 14.4574 0 16.25V17.875C0 18.7738 0.670312 19.5 1.5 19.5H4.58906C4.88438 17.093 6.225 15.0668 8.11406 13.9445Z" fill="#2F327D"/>
+                </svg>
+            </div>
+            <p class="text-gray-500"><span class="font-semibold text-darken text-yellow-500">Vous êtes gérant ?</span> Gagnez du temps et structurez votre établissement.</p>
+        </div>
+        <!--éducatrice-->
+        <div class="flex items-center space-x-5 my-5">
+            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                <svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.375C6.15469 11.375 7.5 9.91758 7.5 8.125C7.5 6.33242 6.15469 4.875 4.5 4.875C2.84531 4.875 1.5 6.33242 1.5 8.125C1.5 9.91758 2.84531 11.375 4.5 11.375ZM25.5 11.375C27.1547 11.375 28.5 9.91758 28.5 8.125C28.5 6.33242 27.1547 4.875 25.5 4.875C23.8453 4.875 22.5 6.33242 22.5 8.125C22.5 9.91758 23.8453 11.375 25.5 11.375ZM27 13H24C23.175 13 22.4297 13.3605 21.8859 13.9445C23.775 15.0668 25.1156 17.093 25.4062 19.5H28.5C29.3297 19.5 30 18.7738 30 17.875V16.25C30 14.4574 28.6547 13 27 13ZM15 13C17.9016 13 20.25 10.4559 20.25 7.3125C20.25 4.16914 17.9016 1.625 15 1.625C12.0984 1.625 9.75 4.16914 9.75 7.3125C9.75 10.4559 12.0984 13 15 13ZM18.6 14.625H18.2109C17.2359 15.1328 16.1531 15.4375 15 15.4375C13.8469 15.4375 12.7688 15.1328 11.7891 14.625H11.4C8.41875 14.625 6 17.2453 6 20.475V21.9375C6 23.2832 7.00781 24.375 8.25 24.375H21.75C22.9922 24.375 24 23.2832 24 21.9375V20.475C24 17.2453 21.5812 14.625 18.6 14.625ZM8.11406 13.9445C7.57031 13.3605 6.825 13 6 13H3C1.34531 13 0 14.4574 0 16.25V17.875C0 18.7738 0.670312 19.5 1.5 19.5H4.58906C4.88438 17.093 6.225 15.0668 8.11406 13.9445Z" fill="#2F327D"/>
+                </svg>
+            </div>
+            <p class="text-gray-500"><span class="font-semibold text-darken text-yellow-500">Vous êtes éducatrice ?</span> ? Disposez d’un outil pratique et enrichissant.</p>
+        </div>
+        <!--parent-->
+        <div class="flex items-center space-x-5 my-5">
+            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                <svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.375C6.15469 11.375 7.5 9.91758 7.5 8.125C7.5 6.33242 6.15469 4.875 4.5 4.875C2.84531 4.875 1.5 6.33242 1.5 8.125C1.5 9.91758 2.84531 11.375 4.5 11.375ZM25.5 11.375C27.1547 11.375 28.5 9.91758 28.5 8.125C28.5 6.33242 27.1547 4.875 25.5 4.875C23.8453 4.875 22.5 6.33242 22.5 8.125C22.5 9.91758 23.8453 11.375 25.5 11.375ZM27 13H24C23.175 13 22.4297 13.3605 21.8859 13.9445C23.775 15.0668 25.1156 17.093 25.4062 19.5H28.5C29.3297 19.5 30 18.7738 30 17.875V16.25C30 14.4574 28.6547 13 27 13ZM15 13C17.9016 13 20.25 10.4559 20.25 7.3125C20.25 4.16914 17.9016 1.625 15 1.625C12.0984 1.625 9.75 4.16914 9.75 7.3125C9.75 10.4559 12.0984 13 15 13ZM18.6 14.625H18.2109C17.2359 15.1328 16.1531 15.4375 15 15.4375C13.8469 15.4375 12.7688 15.1328 11.7891 14.625H11.4C8.41875 14.625 6 17.2453 6 20.475V21.9375C6 23.2832 7.00781 24.375 8.25 24.375H21.75C22.9922 24.375 24 23.2832 24 21.9375V20.475C24 17.2453 21.5812 14.625 18.6 14.625ZM8.11406 13.9445C7.57031 13.3605 6.825 13 6 13H3C1.34531 13 0 14.4574 0 16.25V17.875C0 18.7738 0.670312 19.5 1.5 19.5H4.58906C4.88438 17.093 6.225 15.0668 8.11406 13.9445Z" fill="#2F327D"/>
+                </svg>
+            </div>
+            <p class="text-gray-500"><span class="font-semibold text-darken text-yellow-500">Vous êtes parent ?</span> Restez connecté à l’univers de votre enfant.</p>
+        </div>
+        <!--spécialiste-->
+        <div class="flex items-center space-x-5 my-5">
+            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                <svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.375C6.15469 11.375 7.5 9.91758 7.5 8.125C7.5 6.33242 6.15469 4.875 4.5 4.875C2.84531 4.875 1.5 6.33242 1.5 8.125C1.5 9.91758 2.84531 11.375 4.5 11.375ZM25.5 11.375C27.1547 11.375 28.5 9.91758 28.5 8.125C28.5 6.33242 27.1547 4.875 25.5 4.875C23.8453 4.875 22.5 6.33242 22.5 8.125C22.5 9.91758 23.8453 11.375 25.5 11.375ZM27 13H24C23.175 13 22.4297 13.3605 21.8859 13.9445C23.775 15.0668 25.1156 17.093 25.4062 19.5H28.5C29.3297 19.5 30 18.7738 30 17.875V16.25C30 14.4574 28.6547 13 27 13ZM15 13C17.9016 13 20.25 10.4559 20.25 7.3125C20.25 4.16914 17.9016 1.625 15 1.625C12.0984 1.625 9.75 4.16914 9.75 7.3125C9.75 10.4559 12.0984 13 15 13ZM18.6 14.625H18.2109C17.2359 15.1328 16.1531 15.4375 15 15.4375C13.8469 15.4375 12.7688 15.1328 11.7891 14.625H11.4C8.41875 14.625 6 17.2453 6 20.475V21.9375C6 23.2832 7.00781 24.375 8.25 24.375H21.75C22.9922 24.375 24 23.2832 24 21.9375V20.475C24 17.2453 21.5812 14.625 18.6 14.625ZM8.11406 13.9445C7.57031 13.3605 6.825 13 6 13H3C1.34531 13 0 14.4574 0 16.25V17.875C0 18.7738 0.670312 19.5 1.5 19.5H4.58906C4.88438 17.093 6.225 15.0668 8.11406 13.9445Z" fill="#2F327D"/>
+                </svg>
+            </div>
+            <p class="text-gray-500"><span class="font-semibold text-darken text-yellow-500">Vous êtes spécialiste ?</span>  Participez activement à son épanouissement.</p>
+        </div>
+        <!--chauffeur-->
+        <div class="flex items-center space-x-5 my-5">
+            <div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+                <svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 11.375C6.15469 11.375 7.5 9.91758 7.5 8.125C7.5 6.33242 6.15469 4.875 4.5 4.875C2.84531 4.875 1.5 6.33242 1.5 8.125C1.5 9.91758 2.84531 11.375 4.5 11.375ZM25.5 11.375C27.1547 11.375 28.5 9.91758 28.5 8.125C28.5 6.33242 27.1547 4.875 25.5 4.875C23.8453 4.875 22.5 6.33242 22.5 8.125C22.5 9.91758 23.8453 11.375 25.5 11.375ZM27 13H24C23.175 13 22.4297 13.3605 21.8859 13.9445C23.775 15.0668 25.1156 17.093 25.4062 19.5H28.5C29.3297 19.5 30 18.7738 30 17.875V16.25C30 14.4574 28.6547 13 27 13ZM15 13C17.9016 13 20.25 10.4559 20.25 7.3125C20.25 4.16914 17.9016 1.625 15 1.625C12.0984 1.625 9.75 4.16914 9.75 7.3125C9.75 10.4559 12.0984 13 15 13ZM18.6 14.625H18.2109C17.2359 15.1328 16.1531 15.4375 15 15.4375C13.8469 15.4375 12.7688 15.1328 11.7891 14.625H11.4C8.41875 14.625 6 17.2453 6 20.475V21.9375C6 23.2832 7.00781 24.375 8.25 24.375H21.75C22.9922 24.375 24 23.2832 24 21.9375V20.475C24 17.2453 21.5812 14.625 18.6 14.625ZM8.11406 13.9445C7.57031 13.3605 6.825 13 6 13H3C1.34531 13 0 14.4574 0 16.25V17.875C0 18.7738 0.670312 19.5 1.5 19.5H4.58906C4.88438 17.093 6.225 15.0668 8.11406 13.9445Z" fill="#2F327D"/>
+                </svg>
+            </div>
+            <p class="text-gray-500"><span class="font-semibold text-darken text-yellow-500">Vous êtes chauffeur ?</span> Gérez les trajets en toute sécurité.</p>
+        </div>
+        <button id="btnDedmandez" class="flex items-center space-x-3 pl-3 border-b border-l border-t text-yellow-500 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full" style="border: 1px solid #787B80;">
+            <span>  Découvrez notre vidéo gratuite </span>
+            <div class="border h-14 w-14 rounded-full flex items-center justify-center" style="border: 1px solid #787B80;">
+                <svg class="w-5 h-5" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#787B80"/>
+                </svg>
+            </div>
+        </button>
+    </div>
+    <div data-aos="zoom-in-left" class="md:w-6/12">
+        <img class="md:w-8/12 mx-auto" src="img/biboocostim.png">
+      </div>
+</div>
+
+
+
+<footer class="mt-32" style="background-color: #4CB6AC;">
+    <div class="max-w-lg mx-auto">
+        <div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
+            <div class="relative">
+                <img src="img/biboosplash.png" alt="Biboo Logo" style="height: 90px; width: auto; " />	
+            </div>
+            <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">L’avenir de la gestion éducative</span>
+        </div>
+        <div class="text-center pb-16 pt-5">
+            <label class="font-semibold" style="color: #FFFF;">Abonnez-vous pour recevoir notre newsletter</label>
+            <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 justify-center mt-3">
+                <input type="email" placeholder="Votre Email" class="rounded-full py-2 pl-5 bg-transparent border placeholder-white" style="border: 1px solid #FFFF; color: #FFFF;">
+                <button type="submit" class="text-white w-40 sm:w-auto mx-auto sm:mx-0 font-semibold px-5 py-2 rounded-full" style="background: linear-gradient(105.5deg, #7D8BB7 19.57%, #7D8BB7 78.85%);">S'abonner</button>
+            </div>
+        </div>
+        <div class="flex items-center text-sm justify-center" style="color: #FFFF;">
+            <a href="" class="pr-3">Careers</a>
+            <a href="" class="border-l  px-3" >Privacy</a>
+            <a href="" class="border-l  pl-3">Terms & Conditions</a>
+        </div>
+        <div class="text-center text-white">
+            <p class="my-3 text-sm" style="color: #FFFF;">&copy; 2025 BIBOO. </p>
+            <div class="py-3 tracking-wide">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+	<!-- AOS init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    	AOS.init();
+    </script>
+    <script src="./script.js"></script>
+
+        
+
+</body>
+</html>

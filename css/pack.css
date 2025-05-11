@@ -1,0 +1,177 @@
+.package {
+    background-color: #fff;
+    transition: background-color 0.4s ease, transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    color: #1f2937; /* texte gris foncé */
+  }
+  
+  /* Texte blanc au hover */
+  .package:hover h2,
+  .package:hover h3,
+  .package:hover h4,
+  .package:hover h5,
+  .package:hover h6,
+  .package:hover p,
+  .package:hover li {
+    color: white;
+  }
+  
+  /* Découverte - vert eau */
+  .pack-decouverte:hover {
+    background-color: #afa94c;
+  }
+  
+  /* Visibilité - jaune */
+  .pack-visibilite:hover {
+    background-color: #d491ba;
+  }
+  
+  /* Prestige - violet */
+  .pack-prestige:hover {
+    background-color: #9d5e84;
+  }
+  
+  /* Fidélité - vert */
+  .pack-fidelite:hover {
+    background-color: #88a6e0;
+  }
+  
+  /* Effet de clic */
+  .package:active {
+    transform: scale(0.98);
+  }
+  
+
+
+
+.paragraph {
+    color: #848199;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+
+
+.packages-sec {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    gap: 20px;
+    
+}
+
+.package {
+    width: 500px;
+    background: #fff;
+    padding: 35px 24px 30px 24px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px #93939338;
+    position: relative;
+}
+
+.package h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #afa94c;
+    margin-bottom: 12px;
+}
+.package h5 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #d491ba;
+    margin-bottom: 12px;
+}
+.package h6 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #9d5e84;
+    margin-bottom: 12px;
+}
+.package h4 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #88a6e0;
+    margin-bottom: 12px;
+}
+
+
+.package h3 {
+    font-size: 18px;
+    color: #231D4F;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.package p {
+    color: #848199;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.package ul {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.package ul li {
+    margin: 15px 0;
+    font-size: 15px;
+    color: #848199;
+    font-weight: 500;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.package ul li::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    background: url("/img/check.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+}
+
+.package button {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 5px;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 40px;
+}
+
+/* Couleurs spécifiques à chaque bouton */
+ .btn-decouverte {
+    background-color: #f0ecba; /* bleu */
+  }
+
+  
+  .btn-visibilite {
+    background-color: #f3cee5; /* vert */
+  }
+
+  .btn-prestige {
+    background-color: #f1b5d9; /* orange / or */
+  }
+
+  
+  .btn-fidelite {
+    background-color: #bbcff8; /* violet */
+  }
+
+
+
